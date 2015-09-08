@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    >
+
+    <com.example.chethanbr.splitslide.SplitbarView
+        android:id="@+id/splitbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bgh"
+       />
+
+    <TextView
+        android:id="@+id/ccreditamounttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit"
+        android:layout_alignTop="@+id/rechargeamount"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/rechargeamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recharge"
+        android:layout_alignTop="@+id/qramounttxt"
+        android:layout_toRightOf="@+id/creditet"/>
+
+    <EditText
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rechargeet"
+        android:inputType="number"
+        android:layout_alignTop="@+id/creditet"
+        android:layout_toRightOf="@+id/creditet" />
+
+    <EditText
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/creditet"
+        android:inputType="number"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/splitbar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/qramounttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qramount"
+        android:layout_below="@+id/creditet"
+        android:layout_toRightOf="@+id/rechargeet"
+        android:layout_marginLeft="44dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/qret"
+        android:inputType="number"
+        android:layout_alignTop="@+id/rechargeet"
+        android:layout_alignRight="@+id/splitbar"
+        android:layout_toRightOf="@+id/rechargeet" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalamountet"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/rechargeamount"
+        android:layout_alignStart="@+id/rechargeamount"
+        android:layout_alignRight="@+id/qramounttxt"
+        android:layout_alignEnd="@+id/qramounttxt"
+        android:inputType="number" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/imageupdatebtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
